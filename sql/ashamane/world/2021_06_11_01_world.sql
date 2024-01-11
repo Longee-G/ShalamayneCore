@@ -53,8 +53,13 @@ UPDATE `creature_template` SET `AIName`='', `ScriptName`='' WHERE `entry`=45051;
 UPDATE `creature_template` SET `AIName`='', `ScriptName`='' WHERE `entry`=45057;
 UPDATE `creature_template` SET `AIName`='', `ScriptName`='npc_forsaken_warhorse_45041' WHERE `entry`=@NPC;
 -- ===============================================
--- = Dranoshar Blackade spawns
+-- = Dranoshar Blockade spawns
 -- ===============================================
+
+-- zone:14		`Durotar`
+-- area:4982	`The Dranoshar Blockade`
+-- creature spawns
+
 SET @CGUID := 280000656;
 DELETE FROM `creature` WHERE `guid` BETWEEN @CGUID+0 AND @CGUID+482;
 INSERT INTO `creature` (`guid`, `id`, `map`, `zoneId`, `areaId`, `spawnDifficulties`, `phaseUseFlags`, `PhaseId`, `PhaseGroup`, `terrainSwapMap`, `modelid`, `equipment_id`, `position_x`, `position_y`, `position_z`, `orientation`, `spawntimesecs`, `spawndist`, `currentwaypoint`, `curhealth`, `curmana`, `MovementType`, `npcflag`, `unit_flags`, `unit_flags2`, `unit_flags3`, `dynamicflags`, `ScriptName`, `VerifiedBuild`) VALUES
